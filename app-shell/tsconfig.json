@@ -1,0 +1,18 @@
+{
+  "compilerOptions": {
+    "outDir": "./lib",
+    "skipLibCheck": true,
+    "target": "es2015",
+    "lib": ["dom", "es2015", "es2018"],
+    "jsx": "react",
+    "importHelpers": true,
+    "moduleResolution": "node"
+  },
+  "include": [
+    "./src"
+  ]
+ }
+
+
+ // Follow below link to fix the error coming in resolution of imports and added moduleResolution
+ //https://github.com/microsoft/TypeScript/issues/32432 
