@@ -2,9 +2,9 @@ FROM node:alpine
 
 WORKDIR /usr/src/app
 
-RUN yarn add
+RUN npm install
 
-RUN yarn add typescript -g
+RUN npm install typescript -g
 
 COPY . .
 
