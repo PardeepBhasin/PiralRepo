@@ -1,26 +1,26 @@
 import { Pilet } from '../types';
 
-const MongoClient = require('mongodb').MongoClient;
-const url = 'mongodb://127.0.0.1:27017/data';
-const dbName = 'store'
+// const MongoClient = require('mongodb').MongoClient;
+// const url = 'mongodb://127.0.0.1:27017/data';
+// const dbName = 'store'
 let db:any;
 const versionPref = 'v_';
-MongoClient.connect(url, { useNewUrlParser: true }, (err:any, client:any) => {
-  if (err) return console.log(err)
-  db = client.db(dbName);
-  db.listCollections().toArray(function (err:any, names:any) {
-    for(var  i = 0 ; i < names.length; i++) {
-      if (names[i].name !== "pilets") {
-        db.createCollection("pilets", function(err:any, res:any) {
-          if (err) throw err;
-          console.log("Collection created!");
-        });
-      }
-    }
-  });
-  console.log(`Connected MongoDB: ${url}`)
-  console.log(`Database: ${dbName}`)
-})
+// MongoClient.connect(url, { useNewUrlParser: true }, (err:any, client:any) => {
+//   if (err) return console.log(err)
+//   db = client.db(dbName);
+//   db.listCollections().toArray(function (err:any, names:any) {
+//     for(var  i = 0 ; i < names.length; i++) {
+//       if (names[i].name !== "pilets") {
+//         db.createCollection("pilets", function(err:any, res:any) {
+//           if (err) throw err;
+//           console.log("Collection created!");
+//         });
+//       }
+//     }
+//   });
+//   console.log(`Connected MongoDB: ${url}`)
+//   console.log(`Database: ${dbName}`)
+// })
 const piletData: Record<string, Record<string, Pilet>> = {};
 
 export async function getPilets(): Promise<Array<Pilet>> {
