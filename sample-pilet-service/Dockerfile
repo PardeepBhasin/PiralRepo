@@ -4,8 +4,6 @@ WORKDIR /usr/src/app
 
 RUN npm install
 
-RUN npm install typescript -g
-
 COPY . .
 
 RUN yarn build
