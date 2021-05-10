@@ -2,8 +2,6 @@ FROM node:alpine
 
 WORKDIR /usr/src/app
 
-RUN npm install -g typescript
-
 RUN npm install
 
 COPY . .
