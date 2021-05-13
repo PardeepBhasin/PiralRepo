@@ -51,6 +51,7 @@ export function runApp({
     }),
   );
 
+  // To get latest pilets
   app.get(piletPath, getLatestPilets());
 
   app.post(piletPath, checkAuth(apiKeys, 'publish-pilet'), publishPilet(rootUrl));
