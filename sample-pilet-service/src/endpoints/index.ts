@@ -52,6 +52,7 @@ export const getLatestPilets = (): RequestHandler => async (_, res) => {
   console.log("items-----------------", items);
   return res.json({
     items: items.map(({ author: _0, license: _1, description: _2, ...item }) => item),
+    name: "pardeep bhasin latest"
   });
 };
 
