@@ -1,8 +1,11 @@
-FROM node:alpine
+FROM node:14-alpine
 
+RUN apk add --no-cache bash
 WORKDIR /usr/src/app
 
-RUN npm install
+ADD package.json .
+
+RUN yarn install
 
 COPY . .
 
