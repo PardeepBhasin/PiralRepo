@@ -2,9 +2,10 @@ FROM node:alpine
 
 WORKDIR /usr/src/app
 
-RUN npm install -g tsc \
-    && npm install -g concurrently \
-    && npm install -g typescript
+RUN npm install -g tsc
+RUN npm install -g concurrently
+RUN npm install -g typescript
+RUN npm install
 
 COPY . .
 
