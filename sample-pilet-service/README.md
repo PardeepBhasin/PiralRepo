@@ -64,3 +64,8 @@ This will enable a new command `sample-pilet-service` to be invoked on the comma
 ## License
 
 Piral is released using the MIT license. For more information see the [license file](./LICENSE).
+
+
+RUN SAMPLE SERVICE USING DOCKER IMAGE -> docker run -d -p 9008:9001 pardeepbhasin/sample-pilet-service:56
+
+Add Nuget exe inside newly created folder teamcity to execute as first step while building the image.
