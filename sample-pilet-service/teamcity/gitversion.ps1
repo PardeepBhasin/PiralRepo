@@ -6,7 +6,7 @@ $commandline = $(get-childitem .\packages -Recurse -include gitversion.exe)
 Write-Host $commandline
 
 $json = packages\gitversion.commandline.3.6.5\tools\GitVersion.exe
-write-host $json
+#write-host $json
 
 #The Out-String cmdlet converts the objects that PowerShell manages into an array of strings
 #The ConvertFrom-Json cmdlet converts a JavaScript Object Notation (JSON) formatted string to a custom PSCustomObject object that has a property for each field in the JSON string.
